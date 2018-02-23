@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:fillViewport="false">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:background="@android:color/background_light">
+        <EditText
+            android:id="@+id/editTextEmailF"
+            android:hint="Email@example.com"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center_horizontal"
+            android:textColorHint="@android:color/black"
+            android:textColor="@android:color/black"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="13.5dp"
+            android:background="@drawable/border"
+            android:ems="20"
+            android:inputType="textEmailAddress" />
+        <EditText
+            android:id="@+id/editTextCellNumberF"
+            android:hint="cell number"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/black"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="13.5dp"
+            android:background="@drawable/border"
+            android:ems="20"
+            android:inputType="phone" />
+    <!--title spinner-->
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:id="@+id/spinnerTitleF"
+            android:prompt="@string/title_prompt"
+            android:gravity="center_horizontal"
+            android:textAlignment="center"
+            android:background="@drawable/border"
+            android:layout_marginBottom="13.5dp" />
+    <!--title spinner-->
+        <EditText
+            android:id="@+id/editTextInitialsF"
+            android:hint="Initials"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/black"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="13.5dp"
+            android:background="@drawable/border"
+            android:ems="20"
+            android:inputType="textCapCharacters" />
+        <EditText
+            android:id="@+id/editTextNameF"
+            android:hint="Name"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center_horizontal"
+            android:textColorHint="@android:color/black"
+            android:textColor="@android:color/black"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="13.5dp"
+            android:background="@drawable/border"
+            android:ems="20"
+            android:inputType="textCapCharacters" />
+        <EditText
+            android:id="@+id/editTextSurnameF"
+            android:hint="Surname"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center_horizontal"
+            android:textColorHint="@android:color/black"
+            android:textColor="@android:color/black"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="13.5dp"
+            android:background="@drawable/border"
+            android:ems="20"
+            android:inputType="textCapCharacters" />
+    <!--type of ID spinner-->
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:id="@+id/spinnerTypeOfIDF"
+            android:prompt="@string/typeOfID_prompt"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center_horizontal"
+            android:textAlignment="center"
+            android:background="@drawable/border"
+            android:layout_marginBottom="13.0dp" />
+    <!--type of ID spinner-->
+        <EditText
+            android:id="@+id/editTextIDPassportF"
+            android:hint="ID/Possport"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center_horizontal"
+            android:textColorHint="@android:color/black"
+            android:textColor="@android:color/black"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="13.5dp"
+            android:background="@drawable/border"
+            android:ems="20"
+            android:inputType="number" />
+    <!--preferred Contact email/cell number spinner-->
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:id="@+id/spinnerPreferredContactF"
+            android:prompt="@string/preferredContact_prompt"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center_horizontal"
+            android:textAlignment="center"
+            android:background="@drawable/border"
+            android:layout_marginBottom="13.0dp" />
+    <!--preferred Contact email/cell number spinner-->
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:id="@+id/editTextPasswordF"
+            android:hint="Password"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="13.5dp"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/black"
+            android:password="true"
+            android:inputType="textPassword"
+            android:background="@drawable/border"
+            android:ems="20" />
+        <Button
+            android:text="register"
+            android:layout_width="222.0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonFacebookSignup"
+            android:textColor="@android:color/black"
+            android:gravity="center"
+            android:layout_marginBottom="12.5dp"
+            android:textColorHint="@android:color/black"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/mybutton"
+            android:textAlignment="center"
+            android:layout_gravity="center" />
+    </LinearLayout>
+</ScrollView>

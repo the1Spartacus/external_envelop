@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">Envelop</string>
+  
+  <!--title-->
+  <string name="title_prompt">title</string>
+  <string-array name="title_array">
+    <item>title</item>
+    <item>Mr</item>
+    <item>Ms</item>
+    <item>Dr</item>
+    <item>Prof</item>
+    <item>Adv</item>
+    <item>Hon</item>
+    <item>Rev</item>
+    <item>Miss</item>
+    <item>Mrs</item>
+  </string-array>
+  <!--Type of ID-->
+   <string name="typeOfID_prompt">type of ID</string>
+  <string-array name="typeOfID_array">
+    <item>type of ID</item>
+    <item>ID</item>
+    <item>Passport</item>
+  </string-array>
+   <!--preferred Contact-->
+   <string name="preferredContact_prompt">preferred contact</string>
+  <string-array name="preferredContact_array">
+    <item>preferred contact</item>
+    <item>Email</item>
+    <item>SMS</item>
+  </string-array>
+</resources>

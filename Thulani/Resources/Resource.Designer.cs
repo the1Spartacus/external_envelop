@@ -140,29 +140,32 @@ namespace Thulani
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f080016
-			public const int LoginimageView = 2131230742;
+			// aapt resource value: 0x7f080017
+			public const int LoginimageView = 2131230743;
 			
-			// aapt resource value: 0x7f080019
-			public const int button1 = 2131230745;
+			// aapt resource value: 0x7f08001a
+			public const int button1 = 2131230746;
 			
-			// aapt resource value: 0x7f080028
-			public const int buttonChangePassword = 2131230760;
+			// aapt resource value: 0x7f080015
+			public const int buttonCRM = 2131230741;
 			
-			// aapt resource value: 0x7f080026
-			public const int buttonEditProfile = 2131230758;
+			// aapt resource value: 0x7f080029
+			public const int buttonChangePassword = 2131230761;
 			
-			// aapt resource value: 0x7f08001b
-			public const int buttonFacebook = 2131230747;
+			// aapt resource value: 0x7f080027
+			public const int buttonEditProfile = 2131230759;
+			
+			// aapt resource value: 0x7f08001c
+			public const int buttonFacebook = 2131230748;
 			
 			// aapt resource value: 0x7f08000f
 			public const int buttonFacebookSignup = 2131230735;
 			
-			// aapt resource value: 0x7f080027
-			public const int buttonPreferences = 2131230759;
+			// aapt resource value: 0x7f080028
+			public const int buttonPreferences = 2131230760;
 			
-			// aapt resource value: 0x7f080025
-			public const int buttonRegister = 2131230757;
+			// aapt resource value: 0x7f080026
+			public const int buttonRegister = 2131230758;
 			
 			// aapt resource value: 0x7f080012
 			public const int buttonResetPass = 2131230738;
@@ -170,14 +173,14 @@ namespace Thulani
 			// aapt resource value: 0x7f080004
 			public const int buttonSavePassword = 2131230724;
 			
-			// aapt resource value: 0x7f080015
-			public const int buttonSettings = 2131230741;
+			// aapt resource value: 0x7f080016
+			public const int buttonSettings = 2131230742;
 			
 			// aapt resource value: 0x7f080014
 			public const int buttonSiyakhokha = 2131230740;
 			
-			// aapt resource value: 0x7f08001c
-			public const int editTextCellNumber = 2131230748;
+			// aapt resource value: 0x7f08001d
+			public const int editTextCellNumber = 2131230749;
 			
 			// aapt resource value: 0x7f080006
 			public const int editTextCellNumberF = 2131230726;
@@ -191,20 +194,20 @@ namespace Thulani
 			// aapt resource value: 0x7f080005
 			public const int editTextEmailF = 2131230725;
 			
-			// aapt resource value: 0x7f080022
-			public const int editTextIDPassport = 2131230754;
+			// aapt resource value: 0x7f080023
+			public const int editTextIDPassport = 2131230755;
 			
 			// aapt resource value: 0x7f08000c
 			public const int editTextIDPassportF = 2131230732;
 			
-			// aapt resource value: 0x7f08001e
-			public const int editTextInitials = 2131230750;
+			// aapt resource value: 0x7f08001f
+			public const int editTextInitials = 2131230751;
 			
 			// aapt resource value: 0x7f080008
 			public const int editTextInitialsF = 2131230728;
 			
-			// aapt resource value: 0x7f08001f
-			public const int editTextName = 2131230751;
+			// aapt resource value: 0x7f080020
+			public const int editTextName = 2131230752;
 			
 			// aapt resource value: 0x7f080009
 			public const int editTextNameF = 2131230729;
@@ -215,17 +218,17 @@ namespace Thulani
 			// aapt resource value: 0x7f080001
 			public const int editTextOldPassword = 2131230721;
 			
-			// aapt resource value: 0x7f080017
-			public const int editTextPass = 2131230743;
+			// aapt resource value: 0x7f080018
+			public const int editTextPass = 2131230744;
 			
-			// aapt resource value: 0x7f080024
-			public const int editTextPassword = 2131230756;
+			// aapt resource value: 0x7f080025
+			public const int editTextPassword = 2131230757;
 			
 			// aapt resource value: 0x7f08000e
 			public const int editTextPasswordF = 2131230734;
 			
-			// aapt resource value: 0x7f080020
-			public const int editTextSurname = 2131230752;
+			// aapt resource value: 0x7f080021
+			public const int editTextSurname = 2131230753;
 			
 			// aapt resource value: 0x7f08000a
 			public const int editTextSurnameF = 2131230730;
@@ -233,32 +236,32 @@ namespace Thulani
 			// aapt resource value: 0x7f080013
 			public const int imageViewHomeIcon = 2131230739;
 			
-			// aapt resource value: 0x7f080023
-			public const int spinnerPreferredContact = 2131230755;
+			// aapt resource value: 0x7f080024
+			public const int spinnerPreferredContact = 2131230756;
 			
 			// aapt resource value: 0x7f08000d
 			public const int spinnerPreferredContactF = 2131230733;
 			
-			// aapt resource value: 0x7f08001d
-			public const int spinnerTitle = 2131230749;
+			// aapt resource value: 0x7f08001e
+			public const int spinnerTitle = 2131230750;
 			
 			// aapt resource value: 0x7f080007
 			public const int spinnerTitleF = 2131230727;
 			
-			// aapt resource value: 0x7f080021
-			public const int spinnerTypeOfID = 2131230753;
+			// aapt resource value: 0x7f080022
+			public const int spinnerTypeOfID = 2131230754;
 			
 			// aapt resource value: 0x7f08000b
 			public const int spinnerTypeOfIDF = 2131230731;
 			
-			// aapt resource value: 0x7f08001a
-			public const int textViewCreateAccount = 2131230746;
+			// aapt resource value: 0x7f08001b
+			public const int textViewCreateAccount = 2131230747;
 			
 			// aapt resource value: 0x7f080010
 			public const int textViewForgetPass = 2131230736;
 			
-			// aapt resource value: 0x7f080018
-			public const int textViewForgetPassword = 2131230744;
+			// aapt resource value: 0x7f080019
+			public const int textViewForgetPassword = 2131230745;
 			
 			// aapt resource value: 0x7f080000
 			public const int webview = 2131230720;

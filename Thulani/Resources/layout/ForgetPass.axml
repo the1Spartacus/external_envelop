@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingLeft="20dp"
-    android:paddingRight="20dp"
-    android:background="@android:color/background_light"
-    android:gravity="center">
+  <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+      android:orientation="vertical"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:paddingLeft="20dp"
+      android:paddingRight="20dp"
+      android:background="@android:color/background_light"
+      android:gravity="center">
     <TextView
         android:text="enter email below"
         android:layout_width="match_parent"
@@ -38,12 +38,10 @@
         android:layout_width="222.0dp"
         android:layout_height="wrap_content"
         android:id="@+id/buttonResetPass"
-        android:textColor="@android:color/black"
         android:gravity="center"
         android:layout_marginBottom="12.5dp"
-        android:textColorHint="@android:color/black"
         android:layout_marginTop="20dp"
         android:background="@drawable/mybutton"
         android:textAlignment="center"
         android:layout_gravity="center" />
-</LinearLayout>
+  </LinearLayout>

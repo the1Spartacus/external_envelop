@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="25px"
+    android:minHeight="25px"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:background="@android:color/background_light">
+  
 
-  <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-      android:orientation="vertical"
-      android:layout_width="match_parent"
-      android:layout_height="match_parent"
-      android:minWidth="25px"
-      android:minHeight="25px"
-      android:paddingLeft="20dp"
-      android:paddingRight="20dp"
-      android:background="@android:color/background_light">
     <ImageView
         android:src="@drawable/iconMain"
         android:layout_width="130dp"
@@ -27,17 +28,17 @@
         android:gravity="center"
         android:textAlignment="center"
         android:layout_gravity="center" />
-     <Button
-      android:layout_width="222.0dp"
-      android:layout_height="wrap_content"
-      android:text="CRM"
-      android:id="@+id/buttonCRM"
-      android:layout_marginTop="20dp"
-      android:layout_marginBottom="12.5dp"
-      android:background="@drawable/mybutton"
-      android:gravity="center"
-      android:textAlignment="center"
-      android:layout_gravity="center" />
+    <Button
+        android:layout_width="222.0dp"
+        android:layout_height="wrap_content"
+        android:text="CRM"
+        android:id="@+id/buttonCRM"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="12.5dp"
+        android:background="@drawable/mybutton"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:layout_gravity="center" />
     <Button
         android:layout_width="222.0dp"
         android:layout_height="wrap_content"
@@ -49,7 +50,4 @@
         android:gravity="center"
         android:textAlignment="center"
         android:layout_gravity="center" />
-
-   
-
-  </LinearLayout>
+</LinearLayout>

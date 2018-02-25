@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
-
+using System.Text.RegularExpressions;
 using Android.App;
 using Android.Content;
 using Android.OS;
@@ -131,37 +131,6 @@ namespace Thulani
             facebookSignup.Click += FacebookSignup_Click;
         }
 
-        private void FacebookSignup_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                string dpPath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "user.db3");
-                var db = new SQLiteConnection(dpPath);
-                db.CreateTable<LoginTable>();
-                LoginTable tbl = new LoginTable
-                {
-                    Email = txtEmailF.Text,
-                    CellNumber = txtCellNumberF.Text,
-                    Title = selectedTitleF,
-                    Initials = txtInitialsF.Text,
-                    Name = txtNameF.Text,
-                    Surname = txtSurnameF.Text,
-                    IdType = selectedTypeOfIDF,
-                    IdPass = txtIDPassportF.Text,
-                    PreferedContact = selectedPreferedContactF,
-                    Password = txtPasswordF.Text
-                };
-
-                db.Insert(tbl);
-                Toast.MakeText(this, "Record Added Successfully...,", ToastLength.Short).Show();
-                var intent = new Intent(this, typeof(MainActivity));
-                StartActivity(intent);
-            }
-            catch (Exception ex)
-            {
-                Toast.MakeText(this, ex.ToString(), ToastLength.Short).Show();
-            }
-        }
 
         private void SpnTypeOfIDF_ItemSelected(object sender, AdapterView.ItemSelectedEventArgs e)
         {
@@ -181,5 +150,146 @@ namespace Thulani
             Spinner spinner = (Spinner)sender;
             selectedTitleF = string.Format("{0}", spinner.GetItemAtPosition(e.Position));
         }
+        // check user entered email id is valid or not  
+        public bool IsValidEmail(string email)
+        {
+            return Android.Util.Patterns.EmailAddress.Matcher(email).Matches();
+        }
+        // validate password
+        private bool ValidatePassword(string password, out string ErrorMessage)
+        {
+            var input = password;
+            ErrorMessage = string.Empty;
+
+            if (string.IsNullOrWhiteSpace(input))
+            {
+                throw new Exception("Password should not be empty");
+
+            }
+
+            var hasNumber = new Regex(@"[0-9]+");
+            var hasUpperChar = new Regex(@"[A-Z]+");
+            var hasMiniMaxChars = new Regex(@".{8,15}");
+            var hasLowerChar = new Regex(@"[a-z]+");
+            var hasSymbols = new Regex(@"[!@#$%^&*()_+=\[{\]};:<>|./?,-]");
+
+            if (!hasLowerChar.IsMatch(input))
+            {
+                ErrorMessage = "Password should contain At least one lower case letter";
+                return false;
+            }
+            else if (!hasUpperChar.IsMatch(input))
+            {
+                ErrorMessage = "Password should contain At least one upper case letter";
+                return false;
+            }
+            else if (!hasMiniMaxChars.IsMatch(input))
+            {
+                ErrorMessage = "Password should not be less than or greater than 12 characters";
+                return false;
+            }
+            else if (!hasNumber.IsMatch(input))
+            {
+                ErrorMessage = "Password should contain At least one numeric value";
+                return false;
+            }
+
+            else if (!hasSymbols.IsMatch(input))
+            {
+                ErrorMessage = "Password should contain At least one special case characters";
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+        private void FacebookSignup_Click(object sender, EventArgs e)
+        {
+            var passwordResult = ValidatePassword(txtPasswordF.Text, out string error);
+
+            var emailResult = IsValidEmail(txtEmailF.Text);
+            if (txtEmailF.Text == "")
+            {
+                Toast.MakeText(this, "email can not be empty...,", ToastLength.Short).Show();
+            }
+            else if (emailResult == false)
+            {
+                Toast.MakeText(this, "invalid email...,", ToastLength.Short).Show();
+            }
+            else if (txtCellNumberF.Text == "")
+            {
+                Toast.MakeText(this, "cell number can not be empty...,", ToastLength.Short).Show();
+            }
+            else if (selectedTitleF == "")
+            {
+                Toast.MakeText(this, "Title can not be empty...,", ToastLength.Short).Show();
+            }
+            else if (txtInitialsF.Text == "")
+            {
+                Toast.MakeText(this, "Initials can not be empty...,", ToastLength.Short).Show();
+            }
+            else if (txtNameF.Text == "")
+            {
+                Toast.MakeText(this, "Name can not be empty...,", ToastLength.Short).Show();
+            }
+            else if (txtSurnameF.Text == "")
+            {
+                Toast.MakeText(this, "Surname can not be empty...,", ToastLength.Short).Show();
+            }
+            else if (selectedTypeOfIDF == "")
+            {
+                Toast.MakeText(this, "Type of ID can not be empty...,", ToastLength.Short).Show();
+            }
+            else if (txtIDPassportF.Text == "")
+            {
+                Toast.MakeText(this, "ID/passport can not be empty...,", ToastLength.Short).Show();
+            }
+            else if (selectedPreferedContactF == "")
+            {
+                Toast.MakeText(this, "ID/passport can not be empty...,", ToastLength.Short).Show();
+            }
+            else if (passwordResult == false)
+            {
+                Toast.MakeText(this, error, ToastLength.Short).Show();
+            }
+            else
+            {
+                try
+                {
+                    string dpPath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "user.db3");
+                    var db = new SQLiteConnection(dpPath);
+                    db.CreateTable<LoginTable>();
+                    LoginTable tbl = new LoginTable
+                    {
+                        Email = txtEmailF.Text,
+                        CellNumber = txtCellNumberF.Text,
+                        Title = selectedTitleF,
+                        Initials = txtInitialsF.Text,
+                        Name = txtNameF.Text,
+                        Surname = txtSurnameF.Text,
+                        IdType = selectedTypeOfIDF,
+                        IdPass = txtIDPassportF.Text,
+                        PreferedContact = selectedPreferedContactF,
+                        Password = txtPasswordF.Text
+                    };
+
+                    db.Insert(tbl);
+                    Toast.MakeText(this, "Record Added Successfully...,", ToastLength.Short).Show();
+                    var intent = new Intent(this, typeof(MainActivity));
+                    StartActivity(intent);
+                }
+                catch (Exception ex)
+                {
+                    Toast.MakeText(this, ex.ToString(), ToastLength.Short).Show();
+                }
+            }
+        }
     }
 }
+
+
+
+
+
+
